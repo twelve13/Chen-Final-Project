@@ -1,0 +1,111 @@
+header {
+  background-color: #0bae9b;
+  /*background-color: #aff2ea;*/
+  height: 110px;
+}
+
+.button {
+  background-color: white;
+  float: left;
+  padding: 2% 6%;
+  margin: 2%;
+}
+
+.whole_shelf {
+  background-image: url("../images/shelf.jpg");
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.shelf {
+  float: left;
+  height: 25vh;
+  width: 75%;
+}
+
+.first_shelf {
+  margin: 12% 0% 0% 45%;
+}
+
+.second_shelf {
+  margin: 3% 0% 0% 45%;
+}
+
+.third_shelf {
+  margin: 0% 0% 0% 45%;
+}
+
+.jar {
+  height: 20vh;
+  width: 10%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0% 2%;
+  float: left;
+  text-align: center;
+}
+
+.jar p {
+  margin-top: 50%;
+  color: gray;
+}
+
+.jarD p {
+  margin-top: 95%;
+}
+
+.jarA {
+  background-image: url("../images/jar01.jpg");
+}
+
+.jarB {
+  background-image: url("../images/jar02.jpg");
+}
+
+.jarC {
+  background-image: url("../images/jar03.jpg");
+}
+
+.jarD {
+  background-image: url("../images/jar04.jpg");
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+form {
+  height: 400px;
+  background-color: #0bae9b;
+}
+
+.hide {
+  display: none;
+}
+
+.item_field {
+  display: block;
+  padding: 0 10%;
+}
+
+input {
+  display : inline-block;
+}
+
+legend {
+  text-align: center;
+}
+
+#setup_done {
+  margin-left: 35%;
+}
+
+.add, .subtract, .amount, .log {
+  background-color: white;
+}
