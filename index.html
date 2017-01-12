@@ -9,9 +9,9 @@
 <body>
 <header>
   <div class="button" id="setup">Setup</div>
-  <div class="button">Income</div>
+  <div class="button" id="income">Income</div>
 </header>
-<form class="hide" id="show-on-click">
+<form class="hide" id="setup-form">
   <fieldset>
     <legend>Income Breakdown</legend>
     <div class="item_field">
@@ -20,7 +20,7 @@
       <label for="goal-item1">Goal</label>
       <input type="text" id="goal-item1" placeholder="Goal Amount for Item">
       <label for="percentage-item1">Percentage</label>
-      <input type="text" id="percentage-item1" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item1" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item2">Item</label>
@@ -28,7 +28,7 @@
       <label for="goal-item2">Goal</label>
       <input type="text" id="goal-item2" placeholder="Goal Amount for Item">
       <label for="percentage-item2">Percentage</label>
-      <input type="text" id="percentage-item2" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item2" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item3">Item</label>
@@ -36,7 +36,7 @@
       <label for="goal-item3">Goal</label>
       <input type="text" id="goal-item3" placeholder="Goal Amount for Item">
       <label for="percentage-item3">Percentage</label>
-      <input type="text" id="percentage-item3" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item3" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item4">Item</label>
@@ -44,7 +44,7 @@
       <label for="goal-item4">Goal</label>
       <input type="text" id="goal-item4" placeholder="Goal Amount for Item">
       <label for="percentage-item4">Percentage</label>
-      <input type="text" id="percentage-item4" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item4" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item5">Item</label>
@@ -52,7 +52,7 @@
       <label for="goal-item5">Goal</label>
       <input type="text" id="goal-item5" placeholder="Goal Amount for Item">
       <label for="percentage-item5">Percentage</label>
-      <input type="text" id="percentage-item5" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item5" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item6">Item</label>
@@ -60,7 +60,7 @@
       <label for="goal-item6">Goal</label>
       <input type="text" id="goal-item6" placeholder="Goal Amount for Item">
       <label for="percentage-item6">Percentage</label>
-      <input type="text" id="percentage-item6" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item6" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item7">Item</label>
@@ -68,7 +68,7 @@
       <label for="goal-item7">Goal</label>
       <input type="text" id="goal-item7" placeholder="Goal Amount for Item">
       <label for="percentage-item7">Percentage</label>
-      <input type="text" id="percentage-item7" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item7" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item8">Item</label>
@@ -76,7 +76,7 @@
       <label for="goal-item8">Goal</label>
       <input type="text" id="goal-item8" placeholder="Goal Amount for Item">
       <label for="percentage-item8">Percentage</label>
-      <input type="text" id="percentage-item8" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item8" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item9">Item</label>
@@ -84,7 +84,7 @@
       <label for="goal-item9">Goal</label>
       <input type="text" id="goal-item9" placeholder="Goal Amount for Item">
       <label for="percentage-item9">Percentage</label>
-      <input type="text" id="percentage-item9" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item9" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item10">Item</label>
@@ -92,7 +92,7 @@
       <label for="goal-item10">Goal</label>
       <input type="text" id="goal-item10" placeholder="Goal Amount for Item">
       <label for="percentage-item10">Percentage</label>
-      <input type="text" id="percentage-item10" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item10" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item11">Item</label>
@@ -100,7 +100,7 @@
       <label for="goal-item11">Goal</label>
       <input type="text" id="goal-item11" placeholder="Goal Amount for Item">
       <label for="percentage-item11">Percentage</label>
-      <input type="text" id="percentage-item11" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item11" placeholder="Percentage To Allocate">
     </div>
     <div class="item_field">
       <label for="name-item12">Item</label>
@@ -108,37 +108,93 @@
       <label for="goal-item12">Goal</label>
       <input type="text" id="goal-item12" placeholder="Goal Amount for Item">
       <label for="percentage-item12">Percentage</label>
-      <input type="text" id="percentage-item12" placeholder="Percentage To Allocate">
+      <input type="text" class="percentage-item" id="percentage-item12" placeholder="Percentage To Allocate">
     </div>
   </fieldset>
+  <input type="submit" value="Submit" id="submit-btn">
   <div class="button" id="setup_done">Done with setup</div>
 </form>
+<form class="hide" id="income-form">
+  <fieldset>
+    <div class="income_field">
+      <label for="income-entry">Income</label>
+      <input type="text" id="income-entry" placeholder="Enter Income">
+    </div>
+  </fieldset>
+  <input type="submit" value="Submit" id="submit-btn-2">
+  <div class="button" id="income_setup_done">Done</div>
+</form>
+
+
+
+<div class="wall">
 <div class="whole_shelf">
   <div class="shelf first_shelf">
     <div class="jar jar1 jarA">
+      <div class="show-amount"></div>
       <p>Label 1<p>
+      <!--<div class="show-amount show-amount1"></div>-->
       <!--turn this into a form-->
-      <div class="amount">amount</div>
-      <div class="add">+</div>
-      <div class="subtract">-</div>
-      <div class="log">log</div>
+      <div class="adjust">
+        <div class="amount">amount</div>
+        <div class="add">+</div>
+        <div class="subtract">-</div>
+        <div class="log">log</div>
     </div>
-    <div class="jar jar2 jarC"><p>Label 2<p></div>
-    <div class="jar jar3 jarD"><p>Label 3<p></div>
-    <div class="jar jar4 jarB"><p>Label 4<p></div>
+  </div>
+    <div class="jar jar2 jarC">
+      <div class="show-amount"></div>
+      <p>Label 2<p>
+      <!--<div class="show-amount show-amount2"></div>-->
+    </div>
+    <div class="jar jar3 jarD">
+      <div class="show-amount"></div>
+      <p>Label 3<p>
+    </div>
+    <div class="jar jar4 jarB">
+      <div class="show-amount"></div>
+      <p>Label 4<p>
+    </div>
   </div>
   <div class="shelf second_shelf">
-    <div class="jar jar5 jarB"><p>Label 5<p></div>
-    <div class="jar jar6 jarA"><p>Label 6<p></div>
-    <div class="jar jar7 jarC"><p>Label 7<p></div>
-    <div class="jar jar8 jarD"><p>Label 8<p></div>
+    <div class="jar jar5 jarB">
+      <div class="show-amount"></div>
+      <p>Label 5<p>
+    </div>
+    <div class="jar jar6 jarA">
+      <div class="show-amount"></div>
+      <p>Label 6<p>
+    </div>
+    <div class="jar jar7 jarC">
+      <div class="show-amount"></div>
+      <p>Label 7<p>
+    </div>
+    <div class="jar jar8 jarD">
+      <div class="show-amount"></div>
+      <p>Label 8<p>
+    </div>
   </div>
   <div class="shelf third_shelf">
-    <div class="jar jar9 jarD"><p>Label 9<p></div>
-    <div class="jar jar10 jarD"><p>Label 10<p></div>
-    <div class="jar jar11 jarA"><p>Label 11<p></div>
-    <div class="jar jar12 jarB"><p>Label 12<p></div>
+    <div class="jar jar9 jarD">
+      <div class="show-amount"></div>
+      <p>Label 9<p>
+    </div>
+    <div class="jar jar10 jarD">
+      <div class="show-amount"></div>
+      <p>Label 10<p>
+    </div>
+    <div class="jar jar11 jarA">
+      <div class="show-amount"></div>
+      <p>Label 11<p>
+    </div>
+    <div class="jar jar12 jarB">
+      <div class="show-amount"></div>
+      <p>Label 12<p>
+    </div>
 </div>
+</div>
+</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/main.js"></script>

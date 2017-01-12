@@ -1,15 +1,91 @@
-//ok - super rough plan
-
 //when Setup button is clicked, have the setup form slide down
 $('#setup').click(function() {
-  $('#show-on-click').slideDown();
+  $('#setup-form').slideDown();
 });
 
 $('#setup_done').click(function() {
-  $('#show-on-click').slideUp();
+  $('#setup-form').slideUp();
 });
 
 //make forms functional
+var incomeAmount = 0;
+var percentageJar1 = 0;
+var incomeJar1 = 0;
+var totalJar1= 0;
+var percentageJar2 = 0;
+var incomeJar2 = 0;
+var totalJar2 = 0;
+var percentageJar3 = 0;
+var incomeJar3 = 0;
+var totalJar3 = 0;
+var percentageJar4 = 0;
+var incomeJar4 = 0;
+var totalJar4 = 0;
+var items = [];
+
+$('#setup-form').submit(function(event) {
+  console.log("test!!");
+  percentageJar1 = $('#percentage-item1').val();
+  percentageJar2 = $('#percentage-item2').val();
+  percentageJar3 = $('#percentage-item3').val();
+  percentageJar4 = $('#percentage-item4').val();
+  items = $('.percentage-item');
+  event.preventDefault();
+});
+
+
+$('#income').click(function() {
+  $('#income-form').slideDown();
+})
+
+$('#income_setup_done').click(function() {
+  $('#income-form').slideUp();
+});
+
+$('#income-form').submit(function(event) {
+  incomeAmount = $('#income-entry').val();
+  var displays = $('.show-amount');
+  for (var h=0; h < items.length; h++) {
+    var item = $(items[h]).val();
+      console.log('This is what ITEM is equal to: ' + item);
+
+    var incomeJar = incomeAmount * item;
+      console.log('This is what the income times each item is: ' + incomeJar);
+      // console.log(parseInt($(displays[h]).html()));
+      var showAmount;
+      var currentJarAmmount = parseFloat($(displays[h]).html());
+      if (isNaN(currentJarAmmount)) {
+        showAmount = incomeJar
+      } else {
+        showAmount = currentJarAmmount + incomeJar;
+      }
+
+    // $(displays[h]).html(showAmount);
+    $(displays[h]).html(showAmount);
+    event.preventDefault();
+  }
+
+  //arrayName.push(percentageJar1);
+  // // console.log (arrayName);
+  // incomeJar1 = percentageJar1 * incomeAmount;
+  // totalJar1 = totalJar1 + incomeJar1;
+  // console.log(totalJar1);
+  // $('.show-amount1').html(totalJar1);
+  // incomeJar2 = percentageJar2 * incomeAmount;
+  // totalJar2 = totalJar2 + incomeJar2;
+  // $('.show-amount2').html(totalJar2);
+  // event.preventDefault();
+});
+//$('#income').click(function(){
+//var math = 2*percentageJar1;
+//console.log(math);
+//});
+
+
+$('.jar').click(function() {
+    $('.adjust').show();
+});
+
 
 //(issue?) I was going to have separate buttons for Setup (setting up the item names, goals, and percentages)
 //and for Income (specify income amount and add amounts to jars)
