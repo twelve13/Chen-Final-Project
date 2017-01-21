@@ -1,96 +1,86 @@
+//Declare all your variables
+var incomeAmount = 0;
+var allocations = [];
+var labels = [];
+var showAmount = 0;
+var amountsArray = [];
+var labelsArray = [];
+
+
+
 //when Setup button is clicked, have the setup form slide down
 $('#setup').click(function() {
   $('#setup-form').slideDown();
 });
 
-$('#setup_done').click(function() {
+//when Setup form is submitted, all fields with percentage-item class will get pulled into an array called items
+$('#setup-form').submit(function(event) {
+  console.log("setup form submitted");
+  allocations = $('.percentage-item');
+  labels = $('.name-item');
+  var displayLabels = $('.show-label');
+  for (var i=0; i < labels.length; i++) {
+      var labelName = $(labels[i]).val();
+labelsArray.push(labelName);
+      $(displayLabels[i]).html(labelName);
+    //  $('.show-label').html(label);
+    }
   $('#setup-form').slideUp();
+  event.preventDefault();
 });
 
-//make forms functional
-var incomeAmount = 0;
-var percentageJar1 = 0;
-var incomeJar1 = 0;
-var totalJar1= 0;
-var percentageJar2 = 0;
-var incomeJar2 = 0;
-var totalJar2 = 0;
-var percentageJar3 = 0;
-var incomeJar3 = 0;
-var totalJar3 = 0;
-var percentageJar4 = 0;
-var incomeJar4 = 0;
-var totalJar4 = 0;
-var items = [];
+//when Income button is clicked, have the income form slide down
+$('#income').click(function() {
+  $('#income-form').slideDown();
+});
 
-$('#setup-form').submit(function(event) {
-  console.log("test!!");
-  percentageJar1 = $('#percentage-item1').val();
-  percentageJar2 = $('#percentage-item2').val();
-  percentageJar3 = $('#percentage-item3').val();
-  percentageJar4 = $('#percentage-item4').val();
-  items = $('.percentage-item');
+//when Income form is submitted, will grab the value entered, multiply it by each value in array, and display
+$('#income-form').submit(function(event) {
+  incomeAmount = $('#income-entry').val();
+  var displays = $('.show-amount');
+  for (var h=0; h < allocations.length; h++) {
+    var allocation = $(allocations[h]).val();
+    console.log('This is what ALLOCATION is equal to: ' + allocation);
+    var incomeJar = incomeAmount * allocation;
+    console.log('This is what the income times each allocation is: ' + incomeJar);
+
+    var currentJarAmount = parseFloat($(displays[h]).html());
+      if (isNaN(currentJarAmount)) {
+        showAmount = incomeJar;
+      } else {
+        showAmount = currentJarAmount + incomeJar;
+      }
+amountsArray.push(showAmount);
+    $(displays[h]).html(showAmount);
+
+  }
+
+
+  $('#income-form').slideUp();
   event.preventDefault();
 });
 
 
-$('#income').click(function() {
-  $('#income-form').slideDown();
-})
+$('.jar1').click(function() {
 
-$('#income_setup_done').click(function() {
-  $('#income-form').slideUp();
+  $('.jar-info').show();
+  $('.info-label').html("<p>Jar Name: </p>" + labelsArray[0]);
+  $('.info-amount').html("<p>current amount is: </p>" + amountsArray[0]);
+  console.log(showAmount);
 });
 
-$('#income-form').submit(function(event) {
-  incomeAmount = $('#income-entry').val();
-  var displays = $('.show-amount');
-  for (var h=0; h < items.length; h++) {
-    var item = $(items[h]).val();
-      console.log('This is what ITEM is equal to: ' + item);
-
-    var incomeJar = incomeAmount * item;
-      console.log('This is what the income times each item is: ' + incomeJar);
-      // console.log(parseInt($(displays[h]).html()));
-      var showAmount;
-      var currentJarAmmount = parseFloat($(displays[h]).html());
-      if (isNaN(currentJarAmmount)) {
-        showAmount = incomeJar
-      } else {
-        showAmount = currentJarAmmount + incomeJar;
-      }
-
-    // $(displays[h]).html(showAmount);
-    $(displays[h]).html(showAmount);
-    event.preventDefault();
-  }
-
-  //arrayName.push(percentageJar1);
-  // // console.log (arrayName);
-  // incomeJar1 = percentageJar1 * incomeAmount;
-  // totalJar1 = totalJar1 + incomeJar1;
-  // console.log(totalJar1);
-  // $('.show-amount1').html(totalJar1);
-  // incomeJar2 = percentageJar2 * incomeAmount;
-  // totalJar2 = totalJar2 + incomeJar2;
-  // $('.show-amount2').html(totalJar2);
-  // event.preventDefault();
-});
-//$('#income').click(function(){
-//var math = 2*percentageJar1;
-//console.log(math);
-//});
-
-
-$('.jar').click(function() {
-    $('.adjust').show();
+$('.jar2').click(function() {
+  var goalItem2 = $('#goal-item2').val();
+  $('.info-label').html("<p>Jar Name: </p>" + labelsArray[1]);
+  $('.info-goal').html("<p>Goal is: </p>" + goalItem2);
+  $('.info-amount').html("<p>Current Amount is: </p>" + amountsArray[1]);
 });
 
+$('.jar3').click(function() {
+  $('.info-label').html("<p>Jar Name: </p>" + labelsArray[2]);
+  $('.info-amount').html("<p>current amount is: </p>" + amountsArray[2]);
 
-//(issue?) I was going to have separate buttons for Setup (setting up the item names, goals, and percentages)
-//and for Income (specify income amount and add amounts to jars)
-//but I'm realizing I don't know how to cross-reference the info from different submit events...
-
+});
 //when Setup form Submit button is clicked:
 //create var labelItem1 that will take input from what's entered in form for name-item1
 //target jar1 and change <p> from Label 1 to var labelItem1
