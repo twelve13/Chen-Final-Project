@@ -1,4 +1,6 @@
-//Declare all your variables
+$(document).ready(function(){
+
+//Declare all the variables that will be referenced
 var incomeAmount = 0;
 var allocations = [];
 var labels = [];
@@ -6,31 +8,32 @@ var showAmount = 0;
 var amountsArray = [];
 var labelsArray = [];
 
-
-
-//when Setup button is clicked, have the setup form slide down
-$('#setup').click(function() {
+//when Setup button is clicked, previously hidden Setup form slides down
+$('#setup-button').click(function() {
   $('#setup-form').slideDown();
 });
 
-//when Setup form is submitted, all fields with percentage-item class will get pulled into an array called items
+//user will fill in form with .percentage-item and .name-item classes.  when Submit button is clicked:
 $('#setup-form').submit(function(event) {
-  console.log("setup form submitted");
+//all fields with percentage-item class will get pulled into an array called "allocations"
   allocations = $('.percentage-item');
+//all fields with name-item class will get pulled into an array called "labels"
   labels = $('.name-item');
+//a variable called "displayLabels" is created that pulls all the divs with "show-label" class - this is where the labels for the jars will show up
   var displayLabels = $('.show-label');
+//for every item in the "labels" array, the value of what was entered in the field of the form gets put into a variable called "labelName"
+//that gets put into the displayLabels variable so the names show up on the labels for the jars
   for (var i=0; i < labels.length; i++) {
       var labelName = $(labels[i]).val();
 labelsArray.push(labelName);
       $(displayLabels[i]).html(labelName);
-    //  $('.show-label').html(label);
     }
   $('#setup-form').slideUp();
   event.preventDefault();
 });
 
-//when Income button is clicked, have the income form slide down
-$('#income').click(function() {
+//when Income button is clicked, previously hidden Income form slides down
+$('#income-button').click(function() {
   $('#income-form').slideDown();
 });
 
@@ -54,13 +57,11 @@ amountsArray.push(showAmount);
     $(displays[h]).html(showAmount);
 
   }
-
-
   $('#income-form').slideUp();
   event.preventDefault();
 });
 
-
+//this is where I'm running into trouble.  I can't figure out how to pull the current amount of the jar so I can do further math with it.
 $('.jar1').click(function() {
 
   $('.jar-info').show();
@@ -81,6 +82,10 @@ $('.jar3').click(function() {
   $('.info-amount').html("<p>current amount is: </p>" + amountsArray[2]);
 
 });
+
+});
+
+//the original plan:
 //when Setup form Submit button is clicked:
 //create var labelItem1 that will take input from what's entered in form for name-item1
 //target jar1 and change <p> from Label 1 to var labelItem1

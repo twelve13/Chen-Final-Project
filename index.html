@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Final Project</title>
@@ -7,226 +7,268 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 </head>
-<!--
-<div id="page-content-wrapper">-->
+
 <body>
-<header>
-  <div class="button" id="setup"><p>Setup<p></div>
-  <div class="button" id="income"><p>Income<p></div>
-    <p class="project-name">Title<p>
-</header>
-<form class="hide" id="setup-form">
-  <p class="instructions"> Determine how you'd like to allocate your income. </p>
-  <fieldset>
-    <div class="item_field">
-      <label for="name-item1">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #1">
-      <label for="goal-item1">Goal Amount: </label>
-      <input type="text" id="goal-item1" size="15" placeholder="Goal Amount">
-      <label for="percentage-item1">Percentage</label>
-      <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
+  <header>
+    <div class="button" id="setup-button"><p>Setup<p></div>
+    <div class="button" id="income-button"><p>Income<p></div>
+    <!--<p class="project-name">Title</p>-->
+  </header>
+  <form class="hide" id="setup-form">
+    <p class="instructions"> Set the items you'd like to save for, set goals, and determine how you'd like to allocate your income. </p>
+    <fieldset>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #1">
+        </div>
+        <div class="form-item">
+          <label for="goal-item1">Goal Amount: </label>
+          <input type="text" id="goal-item1" size="15" placeholder="Goal Amount">
+        </div>
+        <div class="form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #2">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item2">Goal Amount: </label>
+          <input type="text" id="goal-item2" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #3">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item3">Goal Amount: </label>
+          <input type="text" id="goal-item3" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #4">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item4">Goal Amount: </label>
+          <input type="text" id="goal-item4" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item4" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #5">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item5">Goal Amount: </label>
+          <input type="text" id="goal-item5" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item5" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #6">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item6">Goal Amount: </label>
+          <input type="text" id="goal-item6" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item6" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #7">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item7">Goal Amount:</label>
+          <input type="text" id="goal-item7" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item7" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #8">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item8">Goal Amount: </label>
+          <input type="text" id="goal-item" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item8">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item8" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #9">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item9">Goal Amount: </label>
+          <input type="text" id="goal-item" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item9">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item9" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #10">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item10">Goal Amount: </label>
+          <input type="text" id="goal-item" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item10">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item10" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #11">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item11">Goal Amount: </label>
+          <input type="text" id="goal-item" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item11">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item11" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+      <div class="item_field clearfix">
+        <div class = "form-item">
+          <label for="name-item">Save up for: </label>
+          <input type="text" class="name-item" size="15" placeholder="Item #12">
+        </div>
+        <div class = "form-item">
+          <label for="goal-item12">Goal Amount: </label>
+          <input type="text" id="goal-item" size="15" placeholder="Goal Amount">
+        </div>
+        <div class = "form-item">
+          <label for="percentage-item12">Percentage: </label>
+          <input type="text" class="percentage-item" id="percentage-item12" size="15" placeholder="Decimal Amount">
+        </div>
+      </div>
+    </fieldset>
+    <input type="submit" value="Submit" class="submit-btn">
+  </form>
+  <form class="hide" id="income-form">
+    <p class="instructions">Enter your income amount.  This will get divided among the jars according to the percentages from the Setup form.</p>
+    <fieldset>
+      <div class="income_field">
+        <label for="income-entry">Income</label>
+        <input type="text" id="income-entry" placeholder="Enter Income">
+      </div>
+    </fieldset>
+    <input type="submit" value="Submit" class="submit-btn">
+  </form>
+  <div class="wall">
+    <div class="whole_shelf">
+      <div class="shelf first_shelf">
+        <div class="jar jar1 jarA">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar2 jarC">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar3 jarD">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar4 jarB">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+      </div>
+      <div class="shelf second_shelf">
+        <div class="jar jar5 jarB">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar6 jarA">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar7 jarC">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+        <div class="jar jar8 jarD">
+          <div class="show-label"></div>
+          <div class="show-amount"></div>
+        </div>
+      </div>
+      <div class="shelf third_shelf">
+        <div class="jar jar9 jarD">
+        <div class="show-label"></div>
+        <div class="show-amount"></div>
+      </div>
+      <div class="jar jar10 jarD">
+        <div class="show-label"></div>
+        <div class="show-amount"></div>
+      </div>
+      <div class="jar jar11 jarA">
+        <div class="show-label"></div>
+        <div class="show-amount"></div>
+      </div>
+      <div class="jar jar12 jarB">
+        <div class="show-label"></div>
+        <div class="show-amount"></div>
+      </div>
     </div>
-    <div class="item_field">
-      <label for="name-item2">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #2">
-      <label for="goal-item2">Goal Amount: </label>
-      <input type="text" id="goal-item2" size="15" placeholder="Goal Amount">
-      <label for="percentage-item2">Percentage</label>
-      <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item3">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #3">
-      <label for="goal-item3">Goal Amount: </label>
-      <input type="text" id="goal-item3" size="15" placeholder="Goal Amount">
-      <label for="percentage-item3">Percentage</label>
-      <input type="text" class="percentage-item" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item4">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #4">
-      <label for="goal-item4">Goal Amount: </label>
-      <input type="text" id="goal-item4" size="15" placeholder="Goal Amount">
-      <label for="percentage-item4">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item4" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item5">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #5">
-      <label for="goal-item5">Goal Amount: </label>
-      <input type="text" id="goal-item5" size="15" placeholder="Goal Amount">
-      <label for="percentage-item5">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item5" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item6">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #6">
-      <label for="goal-item6">Goal Amount: </label>
-      <input type="text" id="goal-item6" size="15" placeholder="Goal Amount">
-      <label for="percentage-item6">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item6" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item7">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #7">
-      <label for="goal-item7">Goal Amount:</label>
-      <input type="text" id="goal-item7" size="15" placeholder="Goal Amount">
-      <label for="percentage-item7">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item7" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item8">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #8">
-      <label for="goal-item8">Goal Amount: </label>
-      <input type="text" id="goal-item8" size="15" placeholder="Goal Amount">
-      <label for="percentage-item8">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item8" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item9">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #9">
-      <label for="goal-item9">Goal Amount: </label>
-      <input type="text" id="goal-item9" size="15" placeholder="Goal Amount">
-      <label for="percentage-item9">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item9" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item10">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #10">
-      <label for="goal-item10">Goal Amount: </label>
-      <input type="text" id="goal-item10" size="15" placeholder="Goal Amount">
-      <label for="percentage-item10">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item10" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item11">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #11">
-      <label for="goal-item11">Goal Amount: </label>
-      <input type="text" id="goal-item11" size="15" placeholder="Goal Amount">
-      <label for="percentage-item11">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item11" size="15" placeholder="Decimal Amount">
-    </div>
-    <div class="item_field">
-      <label for="name-item12">Save up for: </label>
-      <input type="text" class="name-item" size="15" placeholder="Item #12">
-      <label for="goal-item12">Goal Amount: </label>
-      <input type="text" id="goal-item12" size="15" placeholder="Goal Amount">
-      <label for="percentage-item12">Percentage</label>
-      <input type="text" class="percentage-item" id="percentage-item12" size="15" placeholder="Decimal Amount">
-    </div>
-  </fieldset>
-  <input type="submit" value="Submit" class="submit-btn">
-  <!--
-  <div class="button" id="setup_done">Done with setup</div>
--->
-
-</form>
-<form class="hide" id="income-form">
-  <p class="instructions">Enter your income amount - this will get divided according to the setup</p>
-  <fieldset>
-    <div class="income_field">
-      <label for="income-entry">Income</label>
-      <input type="text" id="income-entry" placeholder="Enter Income">
-    </div>
-  </fieldset>
-  <input type="submit" value="Submit" class="submit-btn">
-<!--
-  <div class="button" id="income_setup_done">Done</div>
--->
-</form>
-
-
-
-<div class="wall">
-<div class="whole_shelf">
-  <div class="shelf first_shelf">
-    <div class="jar jar1 jarA">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-      <!--<div class="show-amount show-amount1"></div>
-
-      <div class="adjust">
-        <div class="amount">amount</div>
-        <div class="add">+</div>
-        <div class="subtract">-</div>
-        <div class="log">log</div>
-    </div>-->
-    </div>
-    <div class="jar jar2 jarC">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-      <!--<div class="show-amount show-amount2"></div>-->
-    </div>
-    <div class="jar jar3 jarD">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar4 jarB">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
+    <div class="jar-info" id="jar1-info">
+      <div class="info-label"></div>
+      <div class="info-goal"></div>
+      <div class="info-amount"></div>
     </div>
   </div>
-  <div class="shelf second_shelf">
-    <div class="jar jar5 jarB">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar6 jarA">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar7 jarC">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar8 jarD">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-  </div>
-  <div class="shelf third_shelf">
-    <div class="jar jar9 jarD">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar10 jarD">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar11 jarA">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
-    <div class="jar jar12 jarB">
-      <div class="show-amount"></div>
-      <div class="show-label"></div>
-    </div>
 </div>
-<div class="jar-info" id="jar1-info">
-  <div class="info-label"></div>
-  <div class="info-goal"></div>
-  <div class="info-amount"></div>
-
-</div>
-</div>
-
-</div>
-<!--<div id="sidebar-wrapper">
-  <p>test</p>
-    <p>test</p>
-    <p>test</p>
-</div>-->
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 <footer>
-  <p>Images altered from following source material:</p>
+  <p>Images altered from following sources:</p>
   <p>Copyright: <a href='http://www.123rf.com/profile_spatum'>spatum / 123RF Stock Photo</a></p>
   <p>Copyright: <a href='http://www.123rf.com/profile_dvarg'>dvarg / 123RF Stock Photo</a></p>
   <p>Copyright: <a href='http://www.123rf.com/profile_kchung'>kchung / 123RF Stock Photo</a></p>
   <p>Copyright: <a href='http://www.123rf.com/profile_korovin'>korovin / 123RF Stock Photo</a></p>
 </footer>
-<!--</div>-->
 </html>
