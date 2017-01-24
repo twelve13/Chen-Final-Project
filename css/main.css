@@ -10,29 +10,14 @@ header {
   height: 160px;
 }
 
-.project-name {
-  color: white;
-  font-size: 60px;
-  left: 600px;
-  position: absolute;
-  top: 25px;
-}
-
-footer {
-  background-color: #0bae9b;
-  color: gray;
-}
-
-a, a:hover, a:focus, a:active {
-color: gray;
-font-weight: 400;
-}
-
 .button {
   border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
   color: white;
   float: left;
-  margin: 2%;
+  margin: 10px;
 }
 
 .button p {
@@ -41,15 +26,6 @@ font-weight: 400;
   text-align: center;
   top: 105px;
 }
-
-/*.instructions {
-  color: white;
-  float: left;
-  font-family: 'Cherry Swash', cursive;
-  position: absolute;
-  top: 25px;
-  left: 400px;
-}*/
 
 #setup-button {
   background-image: url("../images/gears.jpg");
@@ -65,8 +41,75 @@ font-weight: 400;
   width: 200px;
 }
 
+#help-button {
+  background-color: #243451;
+  color: #fff79e;
+  float: right;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 50px;
+  height: 60px;
+  padding-top: 15px;
+  text-align: center;
+  width: 75px;
+}
+
+.help-instructions {
+  background-color: #aff2ea;
+  font-family: 'Philosopher', sans-serif;
+  padding: 0 5px 5px 5px;
+}
+
+.hide {
+  display: none;
+}
+
+#setup-form {
+  background-color: #0bae9b;
+  height: 625px;
+  padding: 40px 0 0 100px;
+}
+
+#income-form {
+  background-color: #0bae9b;
+  height: 200px;
+  padding: 40px 0 0 100px;
+}
+
+.instructions {
+  font-size: 20px;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+
 .item_field {
   margin-bottom: 1%;
+}
+
+.form-item {
+  float: left;
+  width: 33%;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.income_field {
+  float: left;
+  margin-left: 30%;
+}
+
+.submit-btn {
+border-radius: 10px;
+color: white;
+height: 50px;
+margin: 2% 0 0 40%;
+width: 120px;
 }
 
 .wall {
@@ -75,6 +118,7 @@ font-weight: 400;
   width: 100%;
 }
 
+/* I know - major design flaw by setting the width to 950px, but I finally got all my shelves and jars aligned this way and can't figure out how to align otherwise*/
 .whole_shelf {
   background-image: url("../images/shelf.jpg");
   background-repeat: no-repeat;
@@ -87,6 +131,7 @@ font-weight: 400;
 .shelf {
   float: left;
   height: 25px;
+  left: 50%;
   left: 400px;
   position: absolute;
   width: 75%;
@@ -134,86 +179,74 @@ font-weight: 400;
   margin-top: 50%;
 }
 
-
 .jarD .show-label {
   margin-top: 95%;
 }
-.clearfix:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
-}
 
-#setup-form {
-  background-color: #0bae9b;
-  height: 625px;
-  padding: 40px 0 0 100px;
-}
-
-#income-form {
-  background-color: #0bae9b;
-  height: 200px;
-  padding: 40px 0 0 100px;
-}
-
-.instructions {
-  font-size: 20px;
-  padding-bottom: 2%;
-  margin-bottom: 2%;
-}
-
-.hide {
-  display: none;
-}
-
-/*.item_field {
-  display: inline-block;
-}*/
-
-/*input {
-  display : inline-block;
-}*/
-
-.submit-btn {
-border-radius: 10px;
-color: white;
-/*float: right;*/
-height: 50px;
-/*margin-right: 10%;*/
-margin: 2% 0 0 40%;
-width: 120px;
-}
-
-.jar-info {
-  background-color: white;
-  border-radius: 10px;
-  display: none;
-  float: right;
-  height: 30%;
-  position: relative;
-  right: -200px;
-  top: 80px;
-  width: 20%;
-  z-index: 2;
-}
-
-.show-amount {
-  color: #aff2ea;
-  font-size: 24px;
-  padding-left: 15px;
-  position: absolute;
-  top: -30px;
-}
-
-.form-item {
+.show-goal, .show-amount, .toggle p {
   float: left;
-  width: 33%;
+  width: 50%;
+}
+
+.toggle {
+  background-color: gray;
+  border-color: #aff2ea;
+  border-radius: 0 15px;
+  border-style: solid;
+  border-width: 4px;
+  color: white;
+  display: none;
+  font-size: 16px;
+  height: 40px;
+  left: -40px;
+  padding: 6px;
+  position: relative;
+  top: -120px;
+  width: 120px;
+}
+
+footer {
+  background-color: #0bae9b;
+  font-size: 10px;
+  height: 50px;
+  padding: 5px;
+}
+
+.sources {
+  float: left;
+  width: 50%;
+}
+
+a, a:hover, a:focus, a:active {
+color: black;
+font-weight: 400;
+}
+
+.signature {
+  color: white;
+  float: left;
+  font-size: 18px;
+  padding-right: 2%;
+  text-align: right;
+  width: 48%;
 }
 
 @media (max-width: 480px) {
+
+  #setup-button {
+    height: 75px;
+    width: 75px;
+  }
+  #income-button {
+    height: 75px;
+    width: 150px;
+  }
+  #help-button {
+    height:25px;
+    padding: 0;
+    width: 40px;
+    font-size: 25px;
+  }
   #setup-form {
     height: 1600px;
   }
